@@ -1,0 +1,390 @@
+:root {
+    --btn-color: white;
+    --text-color-btn: black;
+    --hover-li: gray;
+    --border-box: rgb(161, 161, 161);
+    --font-for-h: 30px;
+    --p-and-pbtn: 18px;
+    --weight-font: 700px;
+    --border-radius: 10px;
+    --p-color: rgb(80, 80, 80);
+}
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    direction: rtl;
+    font-family: "YekanBakh";
+
+}
+
+.nav-beman {
+    background-color: var(--text-color-btn);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    position: sticky;
+    z-index: 20;
+    top: 0;
+
+}
+
+ul {
+    display: flex;
+    color: var(--btn-color);
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+
+
+#call {
+    background-image: url(./images/call.png);
+    position: fixed;
+    bottom: 80px;
+    left: 60px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s;
+}
+
+
+#call:hover {
+    transform:translateY(-20px)
+
+}
+
+
+.li-beman {
+    text-align: center;
+    padding: 0px 20px;;
+}
+
+.li-beman:hover {
+    color: var(--hover-li);
+}
+.btn-a {
+    padding: 40px;
+    
+}
+
+.btn-nav {
+    background-color: var(--btn-color);
+    color: var(--text-color-btn);
+    min-width: 10px;
+    border: 0px;
+    border-radius: var(--border-radius);
+    padding: 15px 30px 15px 30px;
+    margin: 0px 10px;
+    font-size: var(--p-and-pbtn);
+    font-weight: var(--weight-font);
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn-nav:hover {
+    background-color: var(--text-color-btn);
+    border: 1px solid white;
+    color: var(--btn-color);
+}
+
+
+
+.video-container{
+  height: calc(100vh - 80px);
+  min-height: 550px;
+  position: relative;
+  z-index: 3;
+}
+
+.video-container video {
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+    width: 100%;
+    max-height: 100%;
+}
+
+.video-container .caption {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    color: var(--btn-color);
+    padding: 100px;
+}
+
+
+.h-caption {
+    font-size: 45px;
+    font-weight: var(--weight-font);
+}
+
+.btn-Reservation {
+    color: var(--btn-color);
+    background-color: var(--text-color-btn);
+    border: 1px solid white;
+}
+
+.btn-Reservation:hover {
+    background-color: var(--btn-color);
+    color: var(--text-color-btn);
+    
+
+}
+
+.ropenumber {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  left: 0px;
+  right: 0px;
+  background-color: #ffffffa1;
+}
+
+.rope-box {
+    padding: 0px 20px 0px 20px;
+    font-size: 22px;
+}
+
+b {
+    font-size: 50px;
+    padding: 10px;
+}
+
+
+.orginal-section{
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px 15px;
+    background-image: url(./images/serviceListBack.svg);
+    background-position: center;
+}
+
+.webkadeh {
+    text-align: center;
+    font-size: var(--font-for-h);
+    padding-top: 50px;
+}
+
+
+.container-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    border: 8px solid var(--border-box);
+    border-radius: var(--border-radius);
+    background-color: white;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    min-width: 150px;
+    font-size: var(--p-and-pbtn);
+    font-weight: var(--weight-font);
+    cursor: pointer;
+    clip-path: polygon(
+        calc(0% + 5px) calc(0% + 5px), /* بالا چپ */
+        calc(100% - 5px) calc(0% + 5px), /* بالا راست */
+        calc(100% - 5px) calc(100% - 5px), /* پایین راست */
+        calc(0% + 5px) calc(100% - 5px) /* پایین چپ */
+    );
+    transition: clip-path 0.3s linear;
+}
+
+
+.box:hover {
+    border: 3px solid var(--text-color-btn);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.title-portfolio-section {
+    padding-top: 100px;
+    background: url(./images/serviceListBack.svg);
+    background-position: center;
+}
+
+.portfolio-title {
+    font-size: 36px;
+}
+
+
+.p-portfolio {
+    text-align: center;
+    font-size: var(--p-and-pbtn);
+    font-weight: var(--weight-font);
+}
+
+
+
+.container-title-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+    
+
+}
+
+.box-title {
+    position: relative;
+    height: 400px;
+    background-image: url(./images/zarine-Card.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius);
+    transition: transform 0.5s;
+    cursor: pointer;
+    
+}
+
+.p-box-title {
+    position: absolute;
+    color: var(--btn-color);  
+    bottom: 60px;
+    right: 100px; 
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.box1-title {
+    background-image: url(./images/tapsi4.png);
+    background-size: cover;
+}
+
+.box2-title {
+    background-image: url(./images/snap3.jpg);
+}
+
+.box3-title {
+    background-image: url(./images/ai.png);
+    background-size: cover;
+}
+
+
+.box4-title {
+    background-image: url(././images/tehran\ iran.png);
+}
+
+.box-title:hover {
+    background-image: url(./images/web4.png);
+    background-size: cover;
+    transform:translate(10px)
+}
+
+.btn-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-desgine {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--p-color);
+}
+
+
+
+.section-comment {
+    background-color: #aeacac;
+    padding-bottom: 50px;
+}
+
+
+.container-box-comment {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.box-comment {
+    max-width: 500px;
+    clip-path: none;
+    transition: transform 0.3s;
+}
+
+.box-comment:hover {
+    transform: scale(1.1);
+    border: 8px solid var(--border-box);
+}
+
+.image-users {
+    width: 50px;
+
+}
+
+
+.li-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div > li {
+    margin: 20px;
+    list-style-type: none;
+    transition: transform 0.5s;
+}
+
+div > li:hover {
+    transform: translate(10px);
+}
+
+
+
+.img-team {
+    width: 70px;
+    border: 2px solid var(--text-color-btn);
+    border-radius: 30px;
+}
+
+
+.box-description {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-image: none;
+    border: 1px var(--border-box);
+    border-radius: 18px;
+    border:  5px solid rgb(183, 137, 99);
+}
+
+
+.h2-description {
+    text-align: start;
+    line-height: 1.5;
+}
+
+
+footer {
+    background-image: url(./images/serviceListBack.svg);
+    background-color: var(--text-color-btn);
+    background-position: center;
+    padding: 300px 0px 300px;
+}
+
+.ul-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.li-icon-footer {
+    margin: 10px;
+}
+
+
+.ul-footer > img {
+    margin: 10px;
+}
